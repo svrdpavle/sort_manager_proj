@@ -10,8 +10,6 @@ A program that manages different types of sorting algorithms and allows the user
 
 Overview...
 
-###Title 1
-
 ## Project Manual
 
 Instructions...
