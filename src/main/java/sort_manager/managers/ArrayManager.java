@@ -8,7 +8,7 @@ public class ArrayManager {
         Random rand = new Random();
         int[] arr = new int[size];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (rand.nextInt(size) + 1);
+            arr[i] = rand.nextInt();
         }
         return arr;
     }
