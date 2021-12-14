@@ -5,14 +5,18 @@ package sort_manager.managers;
 public class OutputManager {
     public static void printIntroMsg() {
         System.out.println("Welcome to Sort Manager!");
-        System.out.println("Please enter the number of the sorter you wish to use:");
+        System.out.println("Here is a menu of sorters to choose from: ");
         System.out.printf("1. Binary Tree Sorter%n" +
                 "2. Bubble Sorter%n" +
-                "3. Merge Sorter");
+                "3. Merge Sorter%n");
+    }
+
+    public static void printEnterSorterNumMsg() {
+        System.out.println("Enter a sorter number: ");
     }
 
     public static void printArrayMsg() {
-        System.out.println("Please enter the size of array you wish to generate: ");
+        System.out.println("Enter the size of array you wish to generate: ");
     }
 
     public static void printResults() {
