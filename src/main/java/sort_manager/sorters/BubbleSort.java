@@ -1,4 +1,5 @@
 package sort_manager.sorters;
 
-public class BubbleSort {
+public class BubbleSort implements Sorter {
+
 }

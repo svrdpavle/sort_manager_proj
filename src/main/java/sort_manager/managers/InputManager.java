@@ -5,7 +5,7 @@ import java.util.Scanner;
 // Class that manages any user input
 
 public class InputManager {
-    public static void chooseSorter() {
+    public static String chooseSorter() {
         Scanner sc = new Scanner(System.in);
         int sorterNumber;
 
@@ -21,13 +21,13 @@ public class InputManager {
         } while (sorterNumber < 1 || sorterNumber > 3);
 
         if (sorterNumber == 1) {
-            System.out.println("Binary Tree Sorter selected!");
-        }
-        else if (sorterNumber == 2) {
-            System.out.println("Bubble Sorter selected!");
-        }
-        else {
-            System.out.println("Merge Sorter selected!");
+            return "BINARY_TREE";
+        } else if (sorterNumber == 2) {
+            return "BUBBLE";
+        } else if (sorterNumber == 3) {
+            return "MERGE";
+        } else {
+            return null;
         }
     }
 

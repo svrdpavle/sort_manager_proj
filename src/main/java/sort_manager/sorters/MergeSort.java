@@ -1,4 +1,4 @@
 package sort_manager.sorters;
 
-public class MergeSort {
+public class MergeSort implements Sorter {
 }

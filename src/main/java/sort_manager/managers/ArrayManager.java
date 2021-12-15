@@ -2,6 +2,8 @@ package sort_manager.managers;
 
 import java.util.Random;
 
+// class that manages array methods
+
 public class ArrayManager {
     // method to generate a random array
     public static int[] randomArray(int size) {

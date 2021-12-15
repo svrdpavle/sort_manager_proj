@@ -3,6 +3,7 @@ package sort_manager.start;
 import sort_manager.managers.ArrayManager;
 import sort_manager.managers.InputManager;
 import sort_manager.managers.OutputManager;
+import sort_manager.sorters.Sorter;
 
 import java.util.Arrays;
 
@@ -11,13 +12,16 @@ public class Loader {
         // printIntroMsg method is called from the OutputManager class
         OutputManager.printIntroMsg();
 
-        // chooseSorter method is called from the InputManager class
-        InputManager.chooseSorter();
+        // chooseSorter method is called from the InputManager class and assigned to a variable
+        String chosenSorter = InputManager.chooseSorter();
 
-        // chooseArraySize method is called from the InputManager class
-        InputManager.chooseArraySize();
-        int[] array = ArrayManager.randomArray(20);
-        System.out.println(Arrays.toString(array));
+        // chooseArraySize method is called from the InputManager class and assigned to a variable
+        int chosenArraySize = InputManager.chooseArraySize();
 
+        Sorter sorter = SortFactory.sorterFactory(chosenSorter);
+        System.out.println("Sorted picked: " + sorter);
+
+        int[] array = ArrayManager.randomArray(chosenArraySize);
+        System.out.println("Random array: " + Arrays.toString(array));
     }
 }
