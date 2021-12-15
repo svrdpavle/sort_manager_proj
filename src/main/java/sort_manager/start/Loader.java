@@ -16,12 +16,17 @@ public class Loader {
         String chosenSorter = InputManager.chooseSorter();
 
         // chooseArraySize method is called from the InputManager class and assigned to a variable
-        int chosenArraySize = InputManager.chooseArraySize();
+        int chosenArrSize = InputManager.chooseArraySize();
 
         Sorter sorter = SortFactory.sorterFactory(chosenSorter);
         System.out.println("Sorted picked: " + sorter);
 
-        int[] array = ArrayManager.randomArray(chosenArraySize);
-        System.out.println("Random array: " + Arrays.toString(array));
+        int[] arr = ArrayManager.randomArray(chosenArrSize);
+        System.out.println("Random array: " + Arrays.toString(arr));
+
+        //int[] sortedArr = new int[chosenArrSize];
+
+        int[] sortedArr = sorter.sortArray(arr);
+        System.out.println("Sorted array: " + Arrays.toString(sortedArr));
     }
 }
