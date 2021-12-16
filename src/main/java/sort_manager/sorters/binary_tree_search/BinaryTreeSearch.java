@@ -1,4 +1,4 @@
-package sort_manager.sorters.binary_tree;
+package sort_manager.sorters.binary_tree_search;
 
 import sort_manager.sorters.Sorter;
 

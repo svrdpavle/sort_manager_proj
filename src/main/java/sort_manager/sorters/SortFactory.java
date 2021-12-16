@@ -1,6 +1,6 @@
 package sort_manager.sorters;
 
-import sort_manager.sorters.binary_tree.BinaryTreeSearch;
+import sort_manager.sorters.binary_tree_search.BinaryTreeSearch;
 import sort_manager.sorters.bubble_sort.BubbleSorter;
 import sort_manager.sorters.merge_sort.MergeSorter;
 
