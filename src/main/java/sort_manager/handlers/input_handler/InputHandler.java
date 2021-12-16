@@ -1,10 +1,12 @@
-package sort_manager.managers;
+package sort_manager.handlers.input_handler;
+
+import sort_manager.handlers.output_handler.Printer;
 
 import java.util.Scanner;
 
 // Class that manages any user input
 
-public class InputManager {
+public class InputHandler {
     public static String chooseSorter() {
         Scanner sc = new Scanner(System.in);
         int sorterNumber;
@@ -15,7 +17,7 @@ public class InputManager {
          */
         do {
             // asks the user to enter a number corresponding to the sorter menu
-            OutputManager.printEnterSorterNumMsg();
+            Printer.printEnterSorterNumMsg();
             // !! code here to check if the user input is anything but an int !!
             sorterNumber = sc.nextInt();
         } while (sorterNumber < 1 || sorterNumber > 3);
@@ -36,7 +38,7 @@ public class InputManager {
         int arraySize;
 
         do {
-            OutputManager.printArrayMsg();
+            Printer.printArrayMsg();
             // !! code here to check if the user input is anything but an int !!
             arraySize = sc.nextInt();
         } while (arraySize < 1 || arraySize > Integer.MAX_VALUE);

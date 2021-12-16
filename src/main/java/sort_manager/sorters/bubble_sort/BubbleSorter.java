@@ -1,16 +1,18 @@
-package sort_manager.sorters;
+package sort_manager.sorters.bubble_sort;
 
 // Class that uses bubble sort to sort an array of integers into ascending order
 
-public class BubbleSort implements Sorter {
+import sort_manager.sorters.Sorter;
+
+public class BubbleSorter implements Sorter {
     @Override
     public int[] sortArray(int[] unsortedArr) {
         return bubbleSort(unsortedArr);
     }
 
     // bubble sort algorithm
-    private int[] bubbleSort(int[] generatedArr) {
-        int[] bubbleSortArr = transferArray(generatedArr);
+    private int[] bubbleSort(int[] inputArr) {
+        int[] bubbleSortArr = transferArray(inputArr);
         int temp = 0;
         for (int i = 0; i < bubbleSortArr.length; i++) {
             for (int j = 1; j < ((bubbleSortArr.length) - i); j++) {

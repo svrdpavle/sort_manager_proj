@@ -1,8 +1,8 @@
-package sort_manager.managers;
+package sort_manager.handlers.output_handler;
 
-// Class that manages any output
+// Class that manages any output - prints to the user
 
-public class OutputManager {
+public class Printer {
     public static void printIntroMsg() {
         System.out.println("Welcome to Sort Manager!");
         System.out.println("Here is a menu of sorters to choose from: ");

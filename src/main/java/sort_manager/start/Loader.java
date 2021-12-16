@@ -1,8 +1,9 @@
 package sort_manager.start;
 
-import sort_manager.managers.ArrayManager;
-import sort_manager.managers.InputManager;
-import sort_manager.managers.OutputManager;
+import sort_manager.handlers.array_handler.ArrayHandler;
+import sort_manager.handlers.input_handler.InputHandler;
+import sort_manager.handlers.output_handler.Printer;
+import sort_manager.sorters.SortFactory;
 import sort_manager.sorters.Sorter;
 
 import java.util.Arrays;
@@ -10,21 +11,19 @@ import java.util.Arrays;
 public class Loader {
     public static void start() {
         // printIntroMsg method is called from the OutputManager class
-        OutputManager.printIntroMsg();
+        Printer.printIntroMsg();
 
         // chooseSorter method is called from the InputManager class and assigned to a variable
-        String chosenSorter = InputManager.chooseSorter();
+        String chosenSorter = InputHandler.chooseSorter();
 
         // chooseArraySize method is called from the InputManager class and assigned to a variable
-        int chosenArrSize = InputManager.chooseArraySize();
+        int chosenArrSize = InputHandler.chooseArraySize();
 
         Sorter sorter = SortFactory.sorterFactory(chosenSorter);
         System.out.println("Sorted picked: " + sorter);
 
-        int[] arr = ArrayManager.randomArray(chosenArrSize);
+        int[] arr = ArrayHandler.randomArray(chosenArrSize);
         System.out.println("Random array: " + Arrays.toString(arr));
-
-        //int[] sortedArr = new int[chosenArrSize];
 
         int[] sortedArr = sorter.sortArray(arr);
         System.out.println("Sorted array: " + Arrays.toString(sortedArr));

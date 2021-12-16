@@ -1,4 +1,4 @@
-package sort_manager.sorters;
+package sort_manager.sorters.merge_sort;
 
 /*
 Class that uses merge sort to sort an array of integers into ascending order
@@ -7,7 +7,9 @@ Links used to help with the algorithm:
 - https://www.geeksforgeeks.org/merge-sort/
  */
 
-public class MergeSort implements Sorter {
+import sort_manager.sorters.Sorter;
+
+public class MergeSorter implements Sorter {
     @Override
     public int[] sortArray(int[] unsortedArr) {
         return mergeSort(unsortedArr);
