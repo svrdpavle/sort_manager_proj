@@ -5,9 +5,7 @@ import sort_manager.handlers.input_handler.InputHandler;
 import sort_manager.handlers.output_handler.Printer;
 import sort_manager.sorters.SortFactory;
 import sort_manager.sorters.Sorter;
-
-import java.util.Arrays;
-import java.util.Locale;
+import sort_manager.utils.Timer;
 
 public class Loader {
     public static void start() {
@@ -26,8 +24,15 @@ public class Loader {
         // clone the randomised arr to prevent it from being overridden
         int[] tempArr = arr.clone();
 
+        Timer timer = new Timer();
+        timer.setStartTime(System.nanoTime());
+
         int[] sortedArr = sorter.sortArray(tempArr);
 
-        Printer.printResults(chosenSorter, arr, sortedArr);
+        timer.setEndTime(System.nanoTime());
+
+        long timeTaken = timer.getTimeDiff();
+
+        Printer.printResults(chosenSorter, arr, sortedArr, timeTaken);
     }
 }
