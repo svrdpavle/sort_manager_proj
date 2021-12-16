@@ -23,6 +23,7 @@ public class Loader {
         Sorter sorter = SortFactory.sorterFactory(chosenSorter);
 
         int[] arr = ArrayHandler.randomArray(chosenArrSize);
+        // clone the randomised arr to prevent it from being overridden
         int[] tempArr = arr.clone();
 
         int[] sortedArr = sorter.sortArray(tempArr);
