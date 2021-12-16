@@ -7,6 +7,7 @@ import sort_manager.sorters.SortFactory;
 import sort_manager.sorters.Sorter;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Loader {
     public static void start() {
@@ -20,12 +21,11 @@ public class Loader {
         int chosenArrSize = InputHandler.chooseArraySize();
 
         Sorter sorter = SortFactory.sorterFactory(chosenSorter);
-        System.out.println("Sorted picked: " + sorter);
 
         int[] arr = ArrayHandler.randomArray(chosenArrSize);
-        System.out.println("Random array: " + Arrays.toString(arr));
 
         int[] sortedArr = sorter.sortArray(arr);
-        System.out.println("Sorted array: " + Arrays.toString(sortedArr));
+
+        Printer.printResults(chosenSorter, arr, sortedArr);
     }
 }

@@ -23,11 +23,11 @@ public class InputHandler {
         } while (sorterNumber < 1 || sorterNumber > 3);
 
         if (sorterNumber == 1) {
-            return "BINARY_TREE";
+            return "Binary Tree";
         } else if (sorterNumber == 2) {
-            return "BUBBLE";
+            return "Bubble";
         } else if (sorterNumber == 3) {
-            return "MERGE";
+            return "Merge";
         } else {
             return null;
         }

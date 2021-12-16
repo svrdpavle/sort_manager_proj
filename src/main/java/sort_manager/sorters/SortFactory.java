@@ -6,11 +6,11 @@ import sort_manager.sorters.merge_sort.MergeSorter;
 
 public class SortFactory {
     public static Sorter sorterFactory(String sorter) {
-        if ("BINARY_TREE".equals(sorter)) {
+        if ("Binary Tree".equals(sorter)) {
             return new BinaryTreeSearch();
-        } else if ("BUBBLE".equals(sorter)) {
+        } else if ("Bubble".equals(sorter)) {
             return new BubbleSorter();
-        } else if ("MERGE".equals(sorter)) {
+        } else if ("Merge".equals(sorter)) {
             return new MergeSorter();
         } else {
             return null;

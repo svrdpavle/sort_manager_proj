@@ -2,6 +2,8 @@ package sort_manager.handlers.output_handler;
 
 // Class that manages any output - prints to the user
 
+import java.util.Arrays;
+
 public class Printer {
     public static void printIntroMsg() {
         System.out.println("Welcome to Sort Manager!");
@@ -19,10 +21,9 @@ public class Printer {
         System.out.println("Enter the size of array you wish to generate: ");
     }
 
-    public static void printResults() {
-        System.out.println("Sorting using the ");
-        System.out.println("Before sorting: ");
-        System.out.println("After sorting: ");
-        System.out.println("Time taken: ");
+    public static void printResults(String sorterName, int[] inputArr, int[] outputArr) {
+        System.out.println("Using the " + sorterName + " sorter.");
+        System.out.println("Before sorting: " + Arrays.toString(inputArr));
+        System.out.println("After sorting: " + Arrays.toString(outputArr));
     }
 }
