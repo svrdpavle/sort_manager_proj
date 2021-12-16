@@ -46,7 +46,7 @@ public class MergeSorter implements Sorter {
     }
 
     // method to merge the sub-arrays
-    private static int[] merge (int[] inputArr, int[] leftHalf, int[] rightHalf) {
+    private int[] merge (int[] inputArr, int[] leftHalf, int[] rightHalf) {
         int leftSize = leftHalf.length;
         int rightSize = rightHalf.length;
 

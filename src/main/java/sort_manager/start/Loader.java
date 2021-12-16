@@ -23,8 +23,9 @@ public class Loader {
         Sorter sorter = SortFactory.sorterFactory(chosenSorter);
 
         int[] arr = ArrayHandler.randomArray(chosenArrSize);
+        int[] tempArr = arr.clone();
 
-        int[] sortedArr = sorter.sortArray(arr);
+        int[] sortedArr = sorter.sortArray(tempArr);
 
         Printer.printResults(chosenSorter, arr, sortedArr);
     }
