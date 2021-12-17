@@ -6,9 +6,11 @@ A program that manages different types of sorting algorithms and allows the user
 - [**Project Overview**](#project-overview)
   - [**Sorting Algorithms**](#sorting-algorithms)
   - [**Application**](#application)
+  - [**Design Choices**](#design-choices)
   - [**Tests**](#testing)
     - [**Sorter Tests**](#sorter-test-cases)
     - [**Performance Tests**](#performance-test-cases)
+    - [**Future Steps**](#future-steps)
 - [**Project Manual**](#project-manual)
 
 ## Project Overview
