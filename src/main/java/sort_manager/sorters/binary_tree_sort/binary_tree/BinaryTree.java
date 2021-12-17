@@ -1,4 +1,8 @@
-package sort_manager.sorters.binary_tree_search.binary_tree;
+package sort_manager.sorters.binary_tree_sort.binary_tree;
+
+/*
+Class that creates the binary tree
+ */
 
 import java.util.ArrayList;
 

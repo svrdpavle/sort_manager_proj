@@ -1,6 +1,8 @@
 package sort_manager.sorters.bubble_sort;
 
-// Class that uses bubble sort to sort an array of integers into ascending order
+/*
+Class that uses bubble sort to sort an array of integers into ascending order
+ */
 
 import sort_manager.sorters.Sorter;
 
@@ -10,7 +12,6 @@ public class BubbleSorter implements Sorter {
         return bubbleSort(unsortedArr);
     }
 
-    // bubble sort algorithm
     private int[] bubbleSort(int[] inputArr) {
         int[] bubbleSortArr = inputArr.clone();
         int temp = 0;

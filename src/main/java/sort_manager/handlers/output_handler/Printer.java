@@ -1,6 +1,8 @@
 package sort_manager.handlers.output_handler;
 
-// Class that manages any output - prints to the user
+/*
+ Class that manages any output - prints to the user
+ */
 
 import java.util.Arrays;
 

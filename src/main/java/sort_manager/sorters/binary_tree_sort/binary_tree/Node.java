@@ -1,4 +1,8 @@
-package sort_manager.sorters.binary_tree_search.binary_tree;
+package sort_manager.sorters.binary_tree_sort.binary_tree;
+
+/*
+Node class for a binary tree
+ */
 
 public class Node {
     private final int value;

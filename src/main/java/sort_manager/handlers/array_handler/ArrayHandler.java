@@ -2,10 +2,11 @@ package sort_manager.handlers.array_handler;
 
 import java.util.Random;
 
-// class that manages array methods
+/*
+Class that manages array methods
+ */
 
 public class ArrayHandler {
-    // method to generate a random array
     public static int[] randomArray(int size) {
         Random rand = new Random();
         int[] arr = new int[size];

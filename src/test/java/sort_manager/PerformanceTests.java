@@ -1,17 +1,21 @@
 package sort_manager;
 
+/*
+Performance tests for all 3 sorters; comparison of how long it takes for each sorter to sort a large array of random ints
+ */
+
 import org.junit.jupiter.api.*;
 import sort_manager.handlers.array_handler.ArrayHandler;
 import sort_manager.handlers.output_handler.Printer;
 import sort_manager.sorters.Sorter;
-import sort_manager.sorters.binary_tree_search.BinaryTreeSearch;
+import sort_manager.sorters.binary_tree_sort.BinaryTreeSorter;
 import sort_manager.sorters.bubble_sort.BubbleSorter;
 import sort_manager.sorters.merge_sort.MergeSorter;
 import sort_manager.utils.Timer;
 
 public class PerformanceTests {
     Timer timer = new Timer();
-    Sorter binaryTreeSorter = new BinaryTreeSearch();
+    Sorter binaryTreeSorter = new BinaryTreeSorter();
     Sorter bubbleSorter = new BubbleSorter();
     Sorter mergeSorter = new MergeSorter();
     int[] largeUnsortedArr = ArrayHandler.randomArray(10000);

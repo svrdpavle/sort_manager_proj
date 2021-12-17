@@ -1,12 +1,14 @@
 package sort_manager.utils;
 
+/*
+Class for timing
+ */
+
 public class Timer {
     private long startTime;
     private long endTime;
 
-    public long getTimeDiff() {
-        return endTime - startTime;
-    }
+    public long getTimeDiff() { return endTime - startTime; }
 
     public long getStartTime() {
         return startTime;

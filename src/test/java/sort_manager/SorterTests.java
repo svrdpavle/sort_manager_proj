@@ -1,5 +1,9 @@
 package sort_manager;
 
+/*
+Tests for the 3 sorter classes
+ */
+
 import org.junit.jupiter.api.*;
 import sort_manager.handlers.array_handler.ArrayHandler;
 import sort_manager.sorters.SortFactory;
@@ -15,7 +19,7 @@ public class SorterTests {
      2 -> Bubble sorter
      3 -> Merge sorter
      */
-    Sorter sorter = SortFactory.getSorter(3);
+    Sorter sorter = SortFactory.getSorter(2);
 
     int[] largeUnsortedArr = ArrayHandler.randomArray(10000);
 

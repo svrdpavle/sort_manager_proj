@@ -1,31 +1,37 @@
 package sort_manager.sorters;
 
-import sort_manager.sorters.binary_tree_search.BinaryTreeSearch;
+/*
+Class that manages the 3 sorters
+ */
+
+import sort_manager.sorters.binary_tree_sort.BinaryTreeSorter;
 import sort_manager.sorters.bubble_sort.BubbleSorter;
 import sort_manager.sorters.merge_sort.MergeSorter;
 
 public class SortFactory {
     public static Sorter sorterFactory(String sorter) {
-        if ("Binary Tree".equals(sorter)) {
-            return new BinaryTreeSearch();
-        } else if ("Bubble".equals(sorter)) {
-            return new BubbleSorter();
-        } else if ("Merge".equals(sorter)) {
-            return new MergeSorter();
-        } else {
-            return null;
+        switch (sorter) {
+            case "Binary Tree":
+                return new BinaryTreeSorter();
+            case "Bubble":
+                return new BubbleSorter();
+            case "Merge":
+                return new MergeSorter();
+            default:
+                return null;
         }
     }
 
     public static Sorter getSorter(int n) {
-        if (n == 1) {
-            return sorterFactory("Binary Tree");
-        } else if (n == 2) {
-            return sorterFactory("Bubble");
-        } else if (n == 3) {
-            return  sorterFactory("Merge");
-        } else {
-            return null;
+        switch (n) {
+            case 1:
+                return sorterFactory("Binary Tree");
+            case 2:
+                return sorterFactory("Bubble");
+            case 3:
+                return sorterFactory("Merge");
+            default:
+                return null;
         }
     }
 }
