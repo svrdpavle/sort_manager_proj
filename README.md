@@ -1,20 +1,6 @@
 # Sort Manager
 A program that manages different types of sorting algorithms and allows the user to sort a randomised array.
-*** 
-<<<<<<< HEAD
-# Table of Contents
-
-- [Project Overview](#project-overview)
-- [Project Manual](#project-manual)
-
-## Project Overview
-
-Overview...
-
-## Project Manual
-
-Instructions...
-=======
+***
 
 # Table of Contents
 - [**Project Overview**](#project-overview)
@@ -81,5 +67,4 @@ allowing for a more appealing user experience than the console.
 
 ## Project Manual
 Instructions in order to run the program:
-1. 
->>>>>>> dev
+1.
