@@ -28,12 +28,15 @@ public class Loader {
         Timer timer = new Timer();
         timer.setStartTime(System.nanoTime());
 
-        int[] sortedArr = sorter.sortArray(tempArr);
+        try {
+            int[] sortedArr = sorter.sortArray(tempArr);
+            timer.setEndTime(System.nanoTime());
 
-        timer.setEndTime(System.nanoTime());
+            long timeTaken = timer.getTimeDiff();
 
-        long timeTaken = timer.getTimeDiff();
-
-        Printer.printResults(chosenSorter, arr, sortedArr, timeTaken);
+            Printer.printResults(chosenSorter, arr, sortedArr, timeTaken);
+        } catch (NullPointerException e) {
+            System.out.println(e.getLocalizedMessage());
+        }
     }
 }
