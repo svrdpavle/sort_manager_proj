@@ -10,9 +10,12 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SorterTests {
-    Sorter binaryTreeSorter = SortFactory.sorterFactory("Binary Tree");
-    Sorter bubbleSorter = SortFactory.sorterFactory("Bubble");
-    Sorter mergeSorter = SortFactory.sorterFactory("Merge");
+    /*
+     1 -> Binary Tree sorter
+     2 -> Bubble sorter
+     3 -> Merge sorter
+     */
+    Sorter sorter = SortFactory.getSorter(3);
 
     int[] largeUnsortedArr = ArrayHandler.randomArray(10000);
 
@@ -29,6 +32,9 @@ public class SorterTests {
     int[] oddSizedArr = {2, 5, 3, 1, 4};
     int[] oddSizedArrSorted = {1, 2, 3, 4, 5};
 
+    int[] duplicateArr = {5, 2, 3, 4, 5, 1, 3, 1, 2, 4};
+    int[] duplicateArrSorted = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
+
     @BeforeAll
     static void beforeAll(TestInfo testInfo) {
         System.out.println("<" + testInfo.getDisplayName() + "> executing");
@@ -41,12 +47,12 @@ public class SorterTests {
 
     // Binary Tree sorter tests
     @Nested
-    @DisplayName("Binary Tree Sorter Tests")
+    @DisplayName("Sorter Tests")
     class binaryTreeSorterTests {
         @Test
         @DisplayName("Sorts large array")
         void sortsLargeArr() {
-            int[] myBinaryTreeSortedArr = binaryTreeSorter.sortArray(largeUnsortedArr);
+            int[] myBinaryTreeSortedArr = sorter.sortArray(largeUnsortedArr);
             Arrays.sort(largeUnsortedArr);
             assertArrayEquals(largeUnsortedArr, myBinaryTreeSortedArr);
         }
@@ -54,117 +60,37 @@ public class SorterTests {
         @Test
         @DisplayName("Sorts positive array")
         void sortsPositiveArr() {
-            assertArrayEquals(positiveArrSorted, binaryTreeSorter.sortArray(positiveArr));
+            assertArrayEquals(positiveArrSorted, sorter.sortArray(positiveArr));
         }
 
         @Test
         @DisplayName("Sorts negative array")
         void sortsNegativeArr() {
-            assertArrayEquals(negativeArrSorted, binaryTreeSorter.sortArray(negativeArr));
+            assertArrayEquals(negativeArrSorted, sorter.sortArray(negativeArr));
         }
 
         @Test
-        @DisplayName("Sorts a sorted array")
+        @DisplayName("Sorts sorted array")
         void sortsSortedArr() {
-            assertArrayEquals(alreadySortedArr, binaryTreeSorter.sortArray(alreadySortedArr));
+            assertArrayEquals(alreadySortedArr, sorter.sortArray(alreadySortedArr));
         }
 
         @Test
-        @DisplayName("Sorts a one element array")
+        @DisplayName("Sorts one element array")
         void sortsOneElementArr() {
-            assertArrayEquals(oneElementArr, binaryTreeSorter.sortArray(oneElementArr));
+            assertArrayEquals(oneElementArr, sorter.sortArray(oneElementArr));
         }
 
         @Test
-        @DisplayName("Sorts a odd sized array")
+        @DisplayName("Sorts odd sized array")
         void sortsOddSizedArr() {
-            assertArrayEquals(oddSizedArrSorted, binaryTreeSorter.sortArray(oddSizedArr));
-        }
-    }
-
-    // Bubble sorter tests
-    @Nested
-    @DisplayName("Bubble Sorter Tests")
-    class bubbleSorterTests {
-        @Test
-        @DisplayName("Sorts large array")
-        void sortsLargeArr() {
-            int[] myBubbleSortedArr = bubbleSorter.sortArray(largeUnsortedArr);
-            Arrays.sort(largeUnsortedArr);
-            assertArrayEquals(largeUnsortedArr, myBubbleSortedArr);
+            assertArrayEquals(oddSizedArrSorted, sorter.sortArray(oddSizedArr));
         }
 
         @Test
-        @DisplayName("Sorts positive array")
-        void sortsPositiveArr() {
-            assertArrayEquals(positiveArrSorted, bubbleSorter.sortArray(positiveArr));
-        }
-
-        @Test
-        @DisplayName("Sorts negative array")
-        void sortsNegativeArr() {
-            assertArrayEquals(negativeArrSorted, bubbleSorter.sortArray(negativeArr));
-        }
-
-        @Test
-        @DisplayName("Sorts an already sorted array")
-        void sortsSortedArr() {
-            assertArrayEquals(alreadySortedArr, bubbleSorter.sortArray(alreadySortedArr));
-        }
-
-        @Test
-        @DisplayName("Sorts a one element array")
-        void sortsOneElementArr() {
-            assertArrayEquals(oneElementArr, bubbleSorter.sortArray(oneElementArr));
-        }
-
-        @Test
-        @DisplayName("Sorts a odd sized array")
-        void sortsOddSizedArr() {
-            assertArrayEquals(oddSizedArrSorted, bubbleSorter.sortArray(oddSizedArr));
-        }
-    }
-
-    // Merge sorter tests
-    @Nested
-    @DisplayName("Merge Sorter Tests")
-    class mergeSorterTests {
-        @Test
-        @DisplayName("Sorts large array")
-        void sortsLargeArr() {
-            int[] myMergeSortedArr = mergeSorter.sortArray(largeUnsortedArr);
-            Arrays.sort(largeUnsortedArr);
-            assertArrayEquals(largeUnsortedArr, myMergeSortedArr);
-        }
-
-        @Test
-        @DisplayName("Sorts positive array")
-        void sortsPositiveArr() {
-            assertArrayEquals(positiveArrSorted, mergeSorter.sortArray(positiveArr));
-        }
-
-        @Test
-        @DisplayName("Sorts negative array")
-        void sortsNegativeArr() {
-            assertArrayEquals(negativeArrSorted, mergeSorter.sortArray(negativeArr));
-        }
-
-        @Test
-        @DisplayName("Sorts an already sorted array")
-        void sortsSortedArr() {
-            assertArrayEquals(alreadySortedArr, mergeSorter.sortArray(alreadySortedArr));
-        }
-
-        @Test
-        @DisplayName("Sorts a one element array")
-        void sortsOneElementArr() {
-            assertArrayEquals(oneElementArr, mergeSorter.sortArray(oneElementArr));
-        }
-
-        @Test
-        @DisplayName("Sorts a odd sized array")
-        void sortsOddSizedArr() {
-            assertArrayEquals(oddSizedArrSorted, mergeSorter.sortArray(oddSizedArr));
+        @DisplayName("Sorts duplicate array")
+        void sortsDuplicateArr() {
+            assertArrayEquals(duplicateArrSorted, sorter.sortArray(duplicateArr));
         }
     }
 

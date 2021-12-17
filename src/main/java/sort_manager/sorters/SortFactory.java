@@ -16,4 +16,16 @@ public class SortFactory {
             return null;
         }
     }
+
+    public static Sorter getSorter(int n) {
+        if (n == 1) {
+            return sorterFactory("Binary Tree");
+        } else if (n == 2) {
+            return sorterFactory("Bubble");
+        } else if (n == 3) {
+            return  sorterFactory("Merge");
+        } else {
+            return null;
+        }
+    }
 }
