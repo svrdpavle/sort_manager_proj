@@ -14,6 +14,7 @@ public class Loader {
 
         // chooseSorter method is called from the InputManager class and assigned to a variable
         String chosenSorter = InputHandler.chooseSorter();
+        Printer.printSorterSelectedMsg(chosenSorter);
 
         // chooseArraySize method is called from the InputManager class and assigned to a variable
         int chosenArrSize = InputHandler.chooseArraySize();

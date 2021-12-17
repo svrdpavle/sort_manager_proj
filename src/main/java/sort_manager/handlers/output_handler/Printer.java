@@ -17,12 +17,20 @@ public class Printer {
         System.out.println("Enter a sorter number: ");
     }
 
+    public static void printInputErrorMsg() {
+        System.out.println("Please enter an integer.");
+    }
+
+    public static void printSorterSelectedMsg(String sorterName) {
+        System.out.printf("%n< %s sorter has been selected >%n%n", sorterName);
+    }
+
     public static void printArrayMsg() {
         System.out.println("Enter the size of array you wish to generate: ");
     }
 
     public static void printResults(String sorterName, int[] inputArr, int[] outputArr, long timeTaken) {
-        System.out.println("Using the " + sorterName + " sorter.");
+        System.out.printf("%n< %s sorter >%n", sorterName);
         System.out.println("Before sorting: " + Arrays.toString(inputArr));
         System.out.println("After sorting: " + Arrays.toString(outputArr));
         System.out.println("Time taken to sort (nanoseconds): " + timeTaken);

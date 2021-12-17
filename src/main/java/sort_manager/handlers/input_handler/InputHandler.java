@@ -18,7 +18,12 @@ public class InputHandler {
         do {
             // asks the user to enter a number corresponding to the sorter menu
             Printer.printEnterSorterNumMsg();
-            // !! code here to check if the user input is anything but an int !!
+
+            while (sc.hasNextInt() == false) {
+                Printer.printInputErrorMsg();
+                sc.next();
+            }
+
             sorterNumber = sc.nextInt();
         } while (sorterNumber < 1 || sorterNumber > 3);
 
@@ -26,10 +31,8 @@ public class InputHandler {
             return "Binary Tree";
         } else if (sorterNumber == 2) {
             return "Bubble";
-        } else if (sorterNumber == 3) {
-            return "Merge";
         } else {
-            return null;
+            return "Merge";
         }
     }
 
@@ -39,7 +42,12 @@ public class InputHandler {
 
         do {
             Printer.printArrayMsg();
-            // !! code here to check if the user input is anything but an int !!
+
+            while (sc.hasNextInt() == false) {
+                Printer.printInputErrorMsg();
+                sc.next();
+            }
+
             arraySize = sc.nextInt();
         } while (arraySize < 1 || arraySize > Integer.MAX_VALUE);
 
