@@ -24,7 +24,7 @@ The algorithms included are:
 - **Bubble Sorter** - Repeatedly steps through the array, compares adjacent elements and swaps them if they are in the wrong order.
 - **Merge Sorter** - Splits the array into half until each sub-array is one element and then recursively merges each sub-array back into a sorted order.
 
-###Application
+### Application
 Once the application is launched, the user is prompted to enter commands to control it.
 The user can choose the sorting algorithm to be used and then the size of array they would like to be sorted. Once these
 parameters have been inputted by the user, a random array of the size specified is generated and sorted by 
@@ -32,18 +32,18 @@ the chosen sorting algorithm. Finally, the application prints the results which 
 the name of the sorter used, the unsorted array, the sorted array and the time taken to finish sorting
 in nanoseconds.
 
-###Design Choices
-####Interfaces
+### Design Choices
+#### Interfaces
 The use of interfaces allowed for a level of abstraction, specifying the methods for particular classes and achieving multiple inheritance.
 
-####Factory
+#### Factory
 The use of a factory design pattern allowed for various types of objects to be created without necessarily knowing
 what kind of object has been created or how it's been created.
 
-###Testing
+### Testing
 Two classes of test cases were produced in order to test the functionality and performance of the 3 sorters.
 
-####Sorter Test Cases
+#### Sorter Test Cases
 The sorter tests that were run on each sorter include:
 1. **Sorting a large array** - Testing that the selected sorter can sort a large array of integer (10,000 values)
 2. **Sorting a positive array** - Testing that the selected sorter can sort a positive array of integers
@@ -53,15 +53,15 @@ The sorter tests that were run on each sorter include:
 6. **Sorting an odd sized array** - Testing that the selected sorter can sort an odd sized array
 7. **Sorting an array containing duplicates** - Testing that the selected sorter can sort an array of integers including duplicates
 
-####Performance Test Cases
+#### Performance Test Cases
 The performance tests that were run include:
 1. **Testing the performance of the binary tree sorter** - Tests how long it takes for the binary tree sorter to sort a large array of integers (10,000 values)
 2. **Testing the performance of the bubble sorter** - Tests how long it takes for the bubble sorter to sort a large array of integers (10,000 values)
 3. **Testing the performance of the merge sorter** - Tests how long it takes for the merge sorter to sort a large array of integers (10,000 values)
 
 
-###Future steps
-####GUI
+### Future steps
+#### GUI
 The next step for the project would be creating a graphical user interface for the sort manager,
 allowing for a more appealing user experience than the console.
 
