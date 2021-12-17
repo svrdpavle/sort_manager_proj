@@ -31,9 +31,7 @@ public class Loader {
         try {
             int[] sortedArr = sorter.sortArray(tempArr);
             timer.setEndTime(System.nanoTime());
-
             long timeTaken = timer.getTimeDiff();
-
             Printer.printResults(chosenSorter, arr, sortedArr, timeTaken);
         } catch (NullPointerException e) {
             System.out.println(e.getLocalizedMessage());

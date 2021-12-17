@@ -95,7 +95,7 @@ public class BinaryTree implements BinaryTreeInterface {
                 // recursion
                 addNodeToTree(node.getLeftChild(), element);
             }
-        } else if (element > node.getValue()) {
+        } else if (element >= node.getValue()) {
             if (node.isRightChildEmpty()) {
                 node.setRightChild(new Node(element));
             } else {

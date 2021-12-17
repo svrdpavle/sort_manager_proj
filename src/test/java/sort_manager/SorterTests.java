@@ -87,6 +87,7 @@ public class SorterTests {
             assertArrayEquals(oddSizedArrSorted, sorter.sortArray(oddSizedArr));
         }
 
+        // Note: Test will fail when using the Binary Tree Sorter as a binary tree cannot have duplicate values
         @Test
         @DisplayName("Sorts duplicate array")
         void sortsDuplicateArr() {
