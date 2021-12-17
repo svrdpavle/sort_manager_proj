@@ -15,6 +15,8 @@ public class ArrayHandlerTests {
     Sorter bubbleSorter = SortFactory.sorterFactory("Bubble");
     Sorter mergeSorter = SortFactory.sorterFactory("Merge");
     int[] largeUnsortedArr = ArrayHandler.randomArray(10000);
+    int[] positiveArr = {1, 7, 4, 6, 3, 9, 2, 8, 10, 5};
+    int[] positiveArrSorted = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     // Binary Tree sorter tests
     @Nested
@@ -31,8 +33,6 @@ public class ArrayHandlerTests {
         @Test
         @DisplayName("Sorts positive array of ints")
         void sortsPositiveArrOfInts() {
-            int[] positiveArr = {1, 7, 4, 6, 3, 9, 2, 8, 10, 5};
-            int[] positiveArrSorted = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             Assertions.assertArrayEquals(positiveArrSorted, binaryTreeSorter.sortArray(positiveArr));
         }
     }
@@ -52,8 +52,6 @@ public class ArrayHandlerTests {
         @Test
         @DisplayName("Sorts positive array of ints")
         void sortsPositiveArrOfInts() {
-            int[] positiveArr = {1, 7, 4, 6, 3, 9, 2, 8, 10, 5};
-            int[] positiveArrSorted = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             Assertions.assertArrayEquals(positiveArrSorted, bubbleSorter.sortArray(positiveArr));
         }
     }
@@ -73,8 +71,6 @@ public class ArrayHandlerTests {
         @Test
         @DisplayName("Sorts positive array of ints")
         void sortsPositiveArrOfInts() {
-            int[] positiveArr = {1, 7, 4, 6, 3, 9, 2, 8, 10, 5};
-            int[] positiveArrSorted = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             Assertions.assertArrayEquals(positiveArrSorted, mergeSorter.sortArray(positiveArr));
         }
     }
