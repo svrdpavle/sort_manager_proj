@@ -1,9 +1,8 @@
 package sort_manager.sorters;
 
-/*
-Specifies needed for the sort factory class
+/**
+ * Specifies the method needed for the different sorter classes
  */
-
 public interface Sorter {
     int[] sortArray(int[] unsortedArr);
 }

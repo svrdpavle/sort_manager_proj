@@ -1,11 +1,13 @@
 package sort_manager.start;
 
-/*
-Start the program
+/**
+ * This class starts the program
  */
-
 public class App
 {
+    /**
+     * The start method in the Loader class is called
+     */
     public static void main( String[] args ) {
         Loader.start();
     }

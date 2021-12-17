@@ -1,17 +1,29 @@
 package sort_manager.sorters.merge_sort;
 
-/*
-Class that uses merge sort to sort an array of integers into ascending order
- */
-
 import sort_manager.sorters.Sorter;
 
+/**
+ * This class uses merge sort to sort an array of integers into ascending order
+ */
 public class MergeSorter implements Sorter {
+    /**
+     * Calls a method to sort the array of integers passed through as a parameter
+     * @param unsortedArr unsorted array
+     * @return the array that was passed through but in ascending order
+     */
     @Override
     public int[] sortArray(int[] unsortedArr) {
         return mergeSort(unsortedArr);
     }
 
+    /**
+     * First part of the merge sort algorithm
+     * <p>
+     *     Mid-index of the array is found and then recursion is used to split the array passed that was passed through into sub-arrays
+     * </p>
+     * @param inputArr
+     * @return
+     */
     private int[] mergeSort(int[] inputArr) {
         int inputLength = inputArr.length;
 
@@ -37,6 +49,13 @@ public class MergeSorter implements Sorter {
         return merge(inputArr, leftHalf, rightHalf);
     }
 
+    /**
+     * This merges the sub-arrays that have been created by the mergeSort() method
+     * @param inputArr original array passed through as a parameter
+     * @param leftHalf sub-array created from the values that are left of the inputted array's mid-index
+     * @param rightHalf sub-array created from the values that are right of the inputted array's mid-index
+     * @return array that has been sorted
+     */
     private int[] merge (int[] inputArr, int[] leftHalf, int[] rightHalf) {
         int leftSize = leftHalf.length;
         int rightSize = rightHalf.length;

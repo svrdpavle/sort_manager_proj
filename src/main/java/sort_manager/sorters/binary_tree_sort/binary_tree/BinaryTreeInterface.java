@@ -1,9 +1,8 @@
 package sort_manager.sorters.binary_tree_sort.binary_tree;
 
-/*
-Specifies methods needed for the binary tree class
+/**
+ * Specifies different methods needed for the binary tree class
  */
-
 public interface BinaryTreeInterface {
     int getRootElement();
 

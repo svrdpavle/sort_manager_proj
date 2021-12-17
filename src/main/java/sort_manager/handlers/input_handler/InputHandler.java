@@ -1,15 +1,17 @@
 package sort_manager.handlers.input_handler;
 
 import sort_manager.handlers.output_handler.Printer;
-
 import java.util.Scanner;
 
-/*
-Class that manages any user input
+/**
+ * This class handles any input from the user
  */
-
 public class InputHandler {
-    public static String chooseSorter() {
+    /**
+     * Returns a string of the sorter name after the user is asked to input a int corresponding to the sorter menu displayed
+     * @return string of the sorter that has been selected
+     */
+    public static String sorterName() {
         Scanner sc = new Scanner(System.in);
         int sorterNumber;
 
@@ -33,6 +35,13 @@ public class InputHandler {
         }
     }
 
+    /**
+     * Returns the int entered by the user
+     * <p>
+     *    Int entered must be 1 or greater and less than the max int value
+     * </p>
+     * @return size of the array determined by the user input
+     */
     public static int chooseArraySize() {
         Scanner sc = new Scanner(System.in);
         int arraySize;
