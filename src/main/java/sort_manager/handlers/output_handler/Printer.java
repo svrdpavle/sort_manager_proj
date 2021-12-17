@@ -22,7 +22,7 @@ public class Printer {
     }
 
     public static void printSorterSelectedMsg(String sorterName) {
-        System.out.printf("%n< %s sorter has been selected >%n%n", sorterName);
+        System.out.printf("%n> %s sorter has been selected%n", sorterName);
     }
 
     public static void printArrayMsg() {
@@ -30,9 +30,9 @@ public class Printer {
     }
 
     public static void printResults(String sorterName, int[] inputArr, int[] outputArr, long timeTaken) {
-        System.out.printf("%n< %s sorter >%n", sorterName);
+        System.out.printf("%n< %s sorter was used >%n", sorterName);
         System.out.println("Before sorting: " + Arrays.toString(inputArr));
         System.out.println("After sorting: " + Arrays.toString(outputArr));
-        System.out.println("Time taken to sort (nanoseconds): " + timeTaken);
+        System.out.println("Time taken to sort: " + timeTaken + " nanoseconds");
     }
 }

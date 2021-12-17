@@ -45,7 +45,6 @@ public class SorterTests {
         System.out.println("<" + testInfo.getDisplayName() + "> is being tested");
     }
 
-    // Binary Tree sorter tests
     @Nested
     @DisplayName("Sorter Tests")
     class binaryTreeSorterTests {
@@ -87,7 +86,6 @@ public class SorterTests {
             assertArrayEquals(oddSizedArrSorted, sorter.sortArray(oddSizedArr));
         }
 
-        // Note: Test will fail when using the Binary Tree Sorter as a binary tree cannot have duplicate values
         @Test
         @DisplayName("Sorts duplicate array")
         void sortsDuplicateArr() {
