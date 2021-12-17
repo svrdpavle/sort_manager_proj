@@ -67,5 +67,10 @@ allowing for a more appealing user experience than the console.
 
 ## Project Manual
 Instructions in order to run the program:
-1.
+1. Open Git Bash and navigate to your chosen file location to store the cloned project files.
+2. On GitHub navigate to the main page of the Sort Manager repo.
+3. Click the green drop down menu 'CODE', and then copy the URL that appears.
+4. Head back to Git Bash and type ```git clone "<URL>"```.
+5. Now open the Sort Manager file with the IDE of your choice.
+6. Compile and run the App.main(), which is found at ```src/main/java/sort_manager/start/App.java```
 
